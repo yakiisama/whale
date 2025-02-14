@@ -1,6 +1,6 @@
 {
   "name": "@yakiisama/whale",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A tool can collect other tools in the web project",
   "type": "module",
   "files": [
