@@ -34,12 +34,18 @@ class Entry {
   }
 }
 
+
 export const createWhale = (args: WhaleParams) => {
   new Entry(args);
-  return (window as any).Whale;
+  return Whale;
 };
 
 export const config = (config: Record<'mainLogo', string>) => {
   Entry.config(config);
-  return (window as any).Whale;
+  return Whale;
 };
+
+const Whale = {
+  createWhale,
+  config,
+}
