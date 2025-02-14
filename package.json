@@ -1,8 +1,14 @@
 {
-  "name": "whale",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@yaki/whale",
+  "version": "0.0.1",
+  "description": "A tool can collect other tools in the web project",
   "type": "module",
+  "keywords": [
+    "svelte",
+    "vite",
+    "typescript",
+    "whale"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",

@@ -5,7 +5,7 @@ A tool can collect other tools in the web project.
 # Install
 
 ```bash
-npm install -g xxx
+npm install @yaki/whale
 ```
 
 # Usage
