@@ -1,8 +1,13 @@
 {
-  "name": "@yaki/whale",
+  "name": "@yakiisama/whale",
   "version": "0.0.1",
   "description": "A tool can collect other tools in the web project",
   "type": "module",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "module": "dist/es/index.js",
   "keywords": [
     "svelte",
     "vite",
@@ -14,6 +19,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "check": "svelte-check --tsconfig ./tsconfig.app.json && tsc -p tsconfig.node.json",
+    "prepublish": "npm run build",
     "bumpp": "bumpp"
   },
   "devDependencies": {

@@ -18,7 +18,7 @@ export default defineConfig({
       entry: path.resolve(__dirname, 'src/lib/index.ts'),
       name: 'Whale',
       fileName: (format) => `${format}/index.js`,
-      formats: ['es', 'cjs', 'umd'],
+      formats: ['es', 'umd'],
     },
     target: 'es2015',
   },
