@@ -11,6 +11,8 @@ npm install @yakiisama/whale
 # Usage
 
 ```js
+import * as Whale from '@yakiisama/whale';
+//or umd cdn https://cdn.jsdelivr.net/npm/@yakiisama/whale/dist/umd/index.min.js
 Whale.config({
     mainLogo: './src/assets/svelte.svg',
 }).createWhale({
@@ -24,4 +26,5 @@ Whale.config({
     logo: './src/assets/img/ice-cream.svg',
     dom: b,
 });
+
 ```
