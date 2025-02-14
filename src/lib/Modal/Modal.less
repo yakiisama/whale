@@ -1,0 +1,120 @@
+#modal-wrapper {
+  visibility: hidden;
+  font-size: 16px;
+  &.active {
+    visibility: visible;
+  }
+  .modal__mask {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 10001;
+    top: 0;
+    left: 0;
+    background-color: #00000073;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+    &.active {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  .modal__content {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    z-index: 10001;
+    background-color: #fff;
+    width: fit-content;
+    height: fit-content;
+    max-height: 25em;
+    margin: auto;
+    border-radius: 0.3125em;
+    visibility: hidden;
+    transform: scale(0.2);
+    transform-origin: 150px 150px;
+    overflow: hidden;
+    color: rgba(0, 0, 0, 0.85);
+    line-height: normal;
+    transition: all 0.3s ease;
+    opacity: 0;
+    &.active {
+      visibility: visible;
+      transform: scale(1);
+      opacity: 1;
+    }
+    &.closing {
+      animation: closeAnimation 0.3s forwards;
+    }
+    &-header {
+      border-bottom: 1px solid #f0f0f0;
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5em 0.75em;
+      align-items: center;
+      .title {
+        font-size: 1em;
+        opacity: 0.65;
+      }
+      .close {
+        align-self: center;
+        font-size: 1em;
+        cursor: pointer;
+        display: inline-block;
+        svg {
+          width: 0.75em;
+          height: 0.75em;
+        }
+      }
+    }
+    .content {
+      overflow: auto;
+      min-width: 25em;
+      min-height: 12em;
+      padding: 0.7em;
+    }
+    .footer {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      padding: 10px;
+      .btn {
+        padding: 0.5em 1em;
+        border-radius: 0.25em;
+        cursor: pointer;
+        font-size: 0.875em;
+        border: none;
+        &.cancel {
+          background-color: #f0f0f0;
+        }
+        &.confirm {
+          background-color: #1890ff;
+          color: #fff;
+        }
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+    }
+  }
+}
+
+@keyframes closeAnimation {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+}

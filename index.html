@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + Svelte + TS</title>
+  </head>
+  <body>
+
+    <script src="./dist/umd/index.js"></script>
+    <script>
+      const a = document.createElement('div');
+      a.innerHTML = 'aaaa';
+
+      const b = document.createElement('div');
+      b.innerHTML = 'bbbb';
+
+      Whale.config({
+        mainLogo: './src/assets/svelte.svg',
+      })
+        .createWhale({
+          name: 'demo',
+          desc: 'this is a demo',
+          logo: './src/assets/img/cheese.svg',
+          dom: a,
+        })
+        .createWhale({
+          name: 'test',
+          desc: 'this is a test',
+          logo: './src/assets/img/ice-cream.svg', // Changing logo path for consistency
+          dom: b,
+        });
+    </script>
+  </body>
+</html>
